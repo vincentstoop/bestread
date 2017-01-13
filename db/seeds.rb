@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+author1 = Author.new(first_name: "John", prefix: "", last_name: "Grisham", author_img: "http://timemanagement.nl/wp-content/uploads/2014/11/news-grisham.jpg", bio: "John Ray Grisham, Jr. (/ˈɡrɪʃæm/; born February 8, 1955)[2][3] is an American bestselling writer, attorney, politician, and activist best known for his popular legal thrillers. His books have been translated into 42 languages and published worldwide.", quotes:"Prisons are fascinating places, especially when the inmates are educated, white-collar types.")
+author2 = Author.new(first_name: "Agatha", prefix: "", last_name: "Christie", author_img: "http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NDg0MDU0OTI0MDY4MzY3.jpg", bio: "Born on September 15, 1890, in Torquay, England, Agatha Christie published her first novel, The Mysterious Affair at Styles, in 1920, and went on to become one of the most famous writers in history, with mysteries like Murder at the Vicarage, Partners in Crime and Sad Cypress. She sold billions of copies of her work, and was also a noted playwright and romance author. She died on January 12, 1976.", quotes: "One of the luckiest things that can happen to you in life is, I think, to have a happy childhood.")
+
+book1 = Book.new(title: "The Whistler", year: 2016, cover_img: "https://s.s-bol.com/imgbase0/imagebase3/regular/FC/1/6/0/2/9200000056172061.jpg",desc: "Lacy Stoltz never expected to be in the firing line. Investigating judicial misconduct by Florida's one thousand judges, her cases so far have been relatively unexciting. That's until she meets Greg Myers, an indicted lawyer with an assumed name, who has an extraordinary tale to tell.",pages: 352,isbn: "9780385541190")
+book2 = Book.new(title: "Rogue Lawyer", year: 2016, cover_img: "https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/1/7/7/9200000055247716.jpg",desc: "On the right side of the law. Sort of.
+Sebastian Rudd is not your typical street lawyer. He works out of a customized bulletproof van, complete with Wi-Fi, a bar, a small fridge, fine leather chairs, a hidden gun compartment, and a heavily armed driver. He has no firm, no partners, no associates, and only one employee, his driver, who s also his bodyguard, law clerk, confidant, and golf caddy. He lives alone in a small but extremely safe penthouse apartment, and his primary piece of furniture is a vintage pool table. He drinks small-batch bourbon and carries a gun.",pages: 400,isbn: "9781101965863")
+book3 = Book.new(title: "Sycamore Row", year: 2014, cover_img: "https://s.s-bol.com/imgbase0/imagebase3/large/FC/4/5/7/9/9200000020099754.jpg",desc: "John Grisham takes you back to where it all began. One of the most popular novels of our time,A Time to Kill established John Grisham as the master of the legal thriller. Now we return to Ford County as Jake Brigance finds himself embroiled in a fiercely controversial trial that exposes a tortured history of racial tension.", pages: 400, isbn:"9781444779547")
+book4 = Book.new(title: "And Then There Were None", year: 1971, cover_img: "https://s.s-bol.com/imgbase0/imagebase3/large/FC/4/2/2/6/1001004010926224.jpg", desc: "The Queen of Mystery has come to Harper Collins! Agatha Christie, the acknowledged mistress of suspensecreator of indomitable sleuth Miss Marple, meticulous Belgian detective Hercule Poirot, and so many other unforgettable charactersbrings her entire oeuvre of ingenious whodunits, locked room mysteries, and perplexing puzzles to Harper PaperbacksincludingAnd Then There Were None, the worlds bestselling mystery, in which ten strangers, each with a dark secret, are lured to a mansion on an uninhabited island and killed off one by one.", pages: 300, isbn: "9780062073488")
+book4 = Book.new(title: "Murder on the Orient Express", year: 1965, cover_img: "https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/2/2/6/1001004010926226.jpg", desc: "Famous Belgian detective Hercule Poirot must sift through clues--some real and some planted--to find a murderer aboard a crowded train speeding through the snowy European landscape. ", pages: 315, isbn: "9780062073501")
+
+author1.books << book1
+author1.save
+author1.books << book2
+author1.save
+author1.books << book3
+author1.save
+
+author2.books << book4
+author2.save
+author2.books << book5
+author2.save
