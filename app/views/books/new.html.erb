@@ -1,0 +1,23 @@
+<h1>Add New Book</h1>
+
+<%= form_for @book do |f| %>
+  <%= f.label :title, "Book Title" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :year %>
+  <%= f.number_field :year %>
+
+  <%= f.label :cover_img, "Add Book Cover" %>
+  <%= f.text_field :cover_img %>
+
+  <%= f.label :desc, "Description" %>
+  <%= f.text_area :desc, size: "60x30" %>
+
+  <%= f.label :pages %>
+  <%= f.number_field :pages %>
+
+  <%= f.label :isbn, "ISBN" %>
+  <%= f.text_field :isbn %>
+
+  <%= f.submit "Create" %>
+<% end %>
