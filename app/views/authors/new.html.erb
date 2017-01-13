@@ -1,0 +1,23 @@
+<h1>New Author</h1>
+
+<%= form_for @author do |f| %>
+  <%= f.label :first_name, "First name" %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :prefix, "Prefix (if any)" %>
+  <%= f.text_field :prefix %>
+
+  <%= f.label :last_name, "Last name" %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :author_img, "Picture" %>
+  <%= f.text_field :author_img %>
+
+  <%= f.label :bio, "Biography" %>
+  <%= f.text_area :bio, size: "60x30" %>
+
+  <%= f.label :quotes, "Favourite quote (if any)" %>
+  <%= f.text_area :quotes, size: "30x15" %>
+
+  <%= f.submit "Create" %>
+<% end %>
