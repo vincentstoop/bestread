@@ -12,8 +12,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    book_params = params.require(:book).permit(:title, :year, :cover_img, :desc, :pages, :isbn, :author_id)
-
     @book = Book.new(book_params)
 
     if @book.save
@@ -21,5 +19,25 @@ class BooksController < ApplicationController
     else
        render 'new'
     end
+  end
+
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+  def update
+    @book = Book.find(params[:id])
+
+    if @book.update_attributes(book_params)
+      redirect_to @book
+    else
+      render 'edit'
+    end
+  end
+
+  private
+
+  def book_params
+    params.require(:book).permit(:title, :year, :cover_img, :desc, :pages, :isbn, :author_id)
   end
 end
