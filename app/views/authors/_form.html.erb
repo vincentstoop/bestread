@@ -1,0 +1,23 @@
+<%= form_for @author do |f| %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :prefix %>
+  <%= f.text_field :prefix %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :author_img %>
+  <%= f.text_field :author_img %>
+
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+
+  <%= f.label :quotes %>
+  <%= f.text_area :quotes %>
+
+  <%= f.submit (@author.new_record? ? "Create" : "Update") %>
+
+<% end %>
