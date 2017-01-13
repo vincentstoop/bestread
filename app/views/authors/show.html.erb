@@ -8,10 +8,11 @@
 
   <h3>Quote</h3>
   <quote><%= @author.quotes %></quote>
-  <!--
-  t.text :bio
-  t.text :quotes -->
+
 </div>
+
+<hr>
+<%= link_to "[Delete]", author_path(@author.id), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <hr>
 
