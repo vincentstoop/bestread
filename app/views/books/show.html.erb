@@ -5,4 +5,5 @@
 <p> Pages: <%= @book.pages %></p>
 <p> ISBN: <%= @book.isbn %></p>
 
-<%= link_to "Edit Book", edit_book_path(@book.id) %>
+<%= link_to "Edit Book", edit_book_path(@book.id) %>|
+<%= link_to "Delete Book", book_path(@book.id), method: :delete, data: { confirm: "Are you sure?" } %>
