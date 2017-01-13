@@ -1,0 +1,18 @@
+<h1><%= @author.full_name %></h1>
+
+<%= image_tag @author.author_img %>
+
+<div>
+  <h2>Biography</h2>
+  <p><%= @author.bio %></p>
+
+  <h3>Quote</h3>
+  <quote><%= @author.quotes %></quote>
+  <!--
+  t.text :bio
+  t.text :quotes -->
+</div>
+
+<hr>
+
+<%= link_to "All Authors", "/authors" %>

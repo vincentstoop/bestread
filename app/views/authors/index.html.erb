@@ -1,10 +1,7 @@
 <h1>Authors</h1>
 
 <% @authors.each do |author| %>
-<p><%= author.first_name %>
-  <% if author.prefix != "" %>
-  <%= " " + author.prefix %>
-  <% end %>
-  <%= " " + author.last_name %>
+<p>
+  <%= link_to "#{author.full_name}", author_path(author.id) %>
 </p>
 <% end %>
