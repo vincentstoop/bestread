@@ -3,13 +3,12 @@
 
 <p></p>
 
-<ul>
-<li>
-  <%= link_to (image_tag @last_book.cover_img), book_path(@last_book.id) %>
-  <%= link_to "See a list of all books", books_path %>
-</li>
-<li>
-  <%= link_to (image_tag @last_author.author_img), author_path(@last_author.id) %>
-  <%= link_to "See a list of all books", authors_path %>
-</li>
-</ul>
+
+<div class="book">
+  <%= link_to (image_tag @last_book.cover_img, size: "360x536"), book_path(@last_book.id) %>
+  <p><%= link_to "See a list of all books", books_path %></p>
+</div>
+<div class="author">
+  <%= link_to (image_tag @last_author.author_img, size: "360x536"), author_path(@last_author.id) %>
+  <p><%= link_to "See a list of all books", authors_path %></p>
+</div>
