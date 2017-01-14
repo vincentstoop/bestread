@@ -4,14 +4,25 @@
     <h2>by <%= link_to @book.author.full_name, author_path %></h2>
     <p> Year: <%= @book.year %></p>
   </header>
-  <section>
-    <%= image_tag @book.cover_img%>
-    <p> Description: <%= @book.desc %></p>
-    <p> Pages: <%= @book.pages %></p>
-    <p> ISBN: <%= @book.isbn %></p>
-  </section>
-  <footer>
-    <%= link_to "Edit Book", edit_book_path(@book.id) %>|
-    <%= link_to "Delete Book", book_path(@book.id), method: :delete, data: { confirm: "Are you sure?" } %>
-  </footer>
+  <main>
+    <%= image_tag @book.cover_img, { alt: "Cover Image of '#{@book.title}'", size: "270x402"}%>
+    <section>
+      <div class="description">
+        <h4>Description</h4>
+        <p><%= @book.desc %></p>
+      </div>
+      <div class="pages">
+        <h4>Number of pages</h4>
+        <p><%= @book.pages %></p>
+      </div>
+      <div class="isbn">
+        <h4>ISBN</h4>
+        <p><%= @book.isbn %></p>
+      </div>
+    </section>
+  </main>
 </article>
+<footer>
+  <%= link_to "Edit Book", edit_book_path(@book.id), class: "button" %>
+  <%= link_to "Delete Book", book_path(@book.id), class: "button", method: :delete, data: { confirm: "Are you sure?" } %>
+</footer>
