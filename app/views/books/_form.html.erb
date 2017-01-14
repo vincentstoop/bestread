@@ -1,31 +1,31 @@
 <%= form_for @book do |f| %>
 
-  <ul>
+  <ul class="error">
     <% @book.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
   </ul>
 
-  <%= f.label :title, "Book Title" %>
-  <%= f.text_field :title %>
+  <%= f.label :title, "Book Title", class: "title" %>
+  <%= f.text_field :title, class: "title" %>
 
-  <%= f.label :author_id, "Author" %>
+  <%= f.label :author_id, "Author", class: "author" %>
   <%= f.collection_select(:author_id, Author.all, :id, :full_name) %>
 
-  <%= f.label :year %>
-  <%= f.number_field :year %>
+  <%= f.label :year, class: "year" %>
+  <%= f.number_field :year, class: "year" %>
 
-  <%= f.label :cover_img, "Add Book Cover" %>
-  <%= f.text_field :cover_img %>
+  <%= f.label :cover_img, "Add Book Cover", class: "cover" %>
+  <%= f.text_field :cover_img, class: "cover" %>
 
-  <%= f.label :desc, "Description" %>
-  <%= f.text_area :desc, size: "60x30" %>
+  <%= f.label :desc, "Description", class: "description" %>
+  <%= f.text_area :desc, size: "60x30", class: "description" %>
 
-  <%= f.label :pages %>
-  <%= f.number_field :pages %>
+  <%= f.label :pages, class: "pages" %>
+  <%= f.number_field :pages, class: "pages" %>
 
-  <%= f.label :isbn, "ISBN" %>
-  <%= f.text_field :isbn %>
+  <%= f.label :isbn, "ISBN", class: "isbn" %>
+  <%= f.text_field :isbn, class: "isbn" %>
 
   <%= f.submit (@book.new_record? ? "Create" : "Update")  %>
 <% end %>
