@@ -6,9 +6,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "colors";
 
-/* ================================
-Main body
-==================================== */
 body {
 /* Background styles */
   background-image: url("background.jpg");
@@ -20,6 +17,14 @@ body {
 /* primary text color */
   color: $primary-text-color;
   font-family: "Helvetica Neue", Helvetica, Arial;
+  
+  /* =================================
+  Background style
+  ==================================== */
+  background-image: url("background.jpg");
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  line-height: 1.6;
+  font-size: 14px;
 
 /* Links styles */
   a {
@@ -37,7 +42,6 @@ body {
     color: $secondary-link-color;
     background: $secondary-background-color;
   }
-
 
 }
 
