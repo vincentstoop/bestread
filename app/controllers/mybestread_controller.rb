@@ -1,7 +1,7 @@
 class MybestreadController < ApplicationController
   def profile
-    @readbooks = Book.first(4)
-    @wishbooks = Book.last(2)
+    @readbooks = Book.last(4)
+    @wishbooks = Book.first(2)
   end
 
 
