@@ -1,3 +1,45 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
+
+article { /* .books */
+  color: $primary-text-color;
+  background-image: url("background.jpg");
+  font-family: "Helvetica Neue", Helvetica, Arial;
+
+// Style links
+a:link,
+a:visited {
+  color: $primary-link-color;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $secondary-link-color;
+  background: $secondary-background-color;
+}
+
+
+  header {
+    background-color: $secondary-background-color;
+    padding: 0px 25px;
+  }
+
+  h1 a {
+    height: 0px;
+    padding-top: 60px;
+    display: block;
+    font-family: "Esteban", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    background: image-url("http://www.waes.info/logo.png") no-repeat 0 0;
+  }
+
+
+}
