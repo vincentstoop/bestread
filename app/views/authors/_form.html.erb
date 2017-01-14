@@ -1,28 +1,28 @@
 <%= form_for @author do |f| %>
 
-<ul>
-    <% @author.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
+<ul class="error">
+  <% @author.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+  <%= f.label :first_name, class: "first_name" %>
+  <%= f.text_field :first_name, class: "first_name" %>
 
-  <%= f.label :prefix %>
-  <%= f.text_field :prefix %>
+  <%= f.label :prefix, class: "prefix" %>
+  <%= f.text_field :prefix, class: "prefix" %>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+  <%= f.label :last_name, class: "last_name" %>
+  <%= f.text_field :last_name, class: "last_name" %>
 
-  <%= f.label :author_img %>
-  <%= f.text_field :author_img %>
+  <%= f.label :author_img, class: "author_img" %>
+  <%= f.text_field :author_img, class: "author_img" %>
 
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
+  <%= f.label :bio, class: "bio" %>
+  <%= f.text_area :bio, class: "bio" %>
 
-  <%= f.label :quotes %>
-  <%= f.text_area :quotes %>
+  <%= f.label :quotes, class: "quotes" %>
+  <%= f.text_area :quotes, class: "quotes" %>
 
   <%= f.submit (@author.new_record? ? "Create" : "Update") %>
 
