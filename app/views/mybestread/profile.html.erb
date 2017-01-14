@@ -1,0 +1,37 @@
+    <h1>Welcome to My Best Read</h1>
+    <h2>Your private profile on Best Read</h2>
+
+<h3>The last four books you've read</h3>
+<div
+  <ul>
+  <% @readbooks.each do |readbook| %>
+  <li><%= image_tag readbook.cover_img, size: "90x134"%>
+    <div>
+      <%= readbook.author.full_name %>
+      <%= readbook.year %></li>
+    </div>
+  <% end %>
+  </ul>
+</div>
+
+<h3>Books on your wishlist</h3>
+<div
+  <ul>
+  <% @wishbooks.each do |wishbook| %>
+  <li><%= image_tag wishbook.cover_img, size: "90x134"%>
+    <div>
+      <%= wishbook.author.full_name %>
+      <%= wishbook.year %></li>
+    </div>
+  <% end %>
+  </ul>
+</div>
+
+
+    <br><br>
+    <hr>
+
+  <ul>
+    <li><a href="books">Booklist</a></li>
+    <li><a href="authors">Authorlist</a></li>
+  </ul>

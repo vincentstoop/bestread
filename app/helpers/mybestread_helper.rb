@@ -1,0 +1,2 @@
+module MybestreadHelper
+end

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "pages#home"
   resources :books
   resources :authors
+  get "mybestread" => "mybestread#profile", as: :mybestread
+
 end
