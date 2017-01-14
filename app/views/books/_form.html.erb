@@ -1,4 +1,11 @@
 <%= form_for @book do |f| %>
+
+  <ul>
+    <% @book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
   <%= f.label :title, "Book Title" %>
   <%= f.text_field :title %>
 
