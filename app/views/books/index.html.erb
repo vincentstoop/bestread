@@ -1,9 +1,20 @@
-<h1>Books</h1>
+<article>
+  <header>
+    <h1>Books</h1>
+  </header>
 
-<% @books.each do |book| %>
-  <p><%= link_to book.title, book_path(book.id) %></p>
-<% end %>
+  <main>
+    <ul>
+      <% @books.each do |book| %>
+      <li>
+        <%= link_to (image_tag book.cover_img, size: "180x268"), book_path(book.id) %>
+        <!-- <%= image_tag book.cover_img, size: "90x134" %> -->
+      </li>
+      <% end %>
+    </ul>
+  </main>
+</article>
 
-<hr>
-
-<%= link_to "[Add New Book]", new_book_path %>
+<footer>
+  <%= link_to "Add New Book", new_book_path, class: "button" %>
+</footer>
