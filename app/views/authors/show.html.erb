@@ -21,7 +21,7 @@
       <% if @author.books.any? %>
       <ul>
         <% @author.books.each do |book| %>
-          <li><%= book.title %></li>
+          <li><%= link_to book.title, book_path(book.id) %></li>
         <% end %>
       </ul>
     <% else %>

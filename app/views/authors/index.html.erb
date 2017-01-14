@@ -1,11 +1,15 @@
-<h1>Authors</h1>
+<article>
+  <header>
+    <h1>Authors</h1>
+  </header>
 
-<% @authors.each do |author| %>
-<p>
-  <%= link_to "#{author.full_name}", author_path(author.id) %>
-</p>
-<% end %>
+  <ul>
+    <% @authors.each do |author| %>
+      <li><%= link_to "#{author.full_name}", author_path(author.id) %></li>
+    <% end %>
+  </ul>
+</article>
 
-<hr />
-
-<%= link_to "Add an author", "/authors/new"%>
+<footer>
+  <%= link_to "Add an author", "/authors/new"%>
+</footer>
