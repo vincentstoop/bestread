@@ -6,15 +6,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "colors";
 
+body {
+/* Background styles */
+  background-image: url("background.jpg");
+  width: 960;
 
+/* Box sizing */
+  * box-sizing: border-box;
 
-ul { /* .books */
-
-  /* =================================
-  Primary text color
-  ==================================== */
+/* primary text color */
   color: $primary-text-color;
-
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  
   /* =================================
   Background style
   ==================================== */
@@ -23,15 +26,63 @@ ul { /* .books */
   line-height: 1.6;
   font-size: 14px;
 
-  /* =================================
-  Box sizing
+/* Links styles */
+  a {
+      text-decoration: none;
+  }
+
+  a:link,
+  a:visited {
+    color: $primary-link-color;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: $secondary-link-color;
+    background: $secondary-background-color;
+  }
+
+}
+
+/* ================================
+Header
 ==================================== */
-display: inline-flex;
-flex-direction: row;
+header {
+  background-color: $secondary-background-color;
+  padding: 0px 25px;
+  height: 80px;
+}
 
 
 
-* box-sizing: border-box;
+nav {
+
+
+}
+
+/* ================================
+Article body
+==================================== */
+article { /* .books */
+
+/* Flex box */
+ul {
+  display: -webkit-flex;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+/* =================================
+Flex items
+==================================== */
+li {
+    margin: 10px;
+}
+
+h1 {
+
+}
 
 
 }

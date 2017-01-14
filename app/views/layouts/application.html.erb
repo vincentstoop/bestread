@@ -9,10 +9,21 @@
   </head>
 
   <body>
+<!-- begin header -->
     <header>
       <%= link_to (image_tag "#{root_path}app/assets/images/arrow.png"), root_path %>
-      <%= link_to "MyBestRead", mybestread_path %>
+
+<!--Nav bar  -->
+      <nav>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "MyBestRead", mybestread_path %></li>
+        <li><%= link_to "All Authors", "/authors" %></li>
+        <li><%= link_to "All Books", "/books" %></li>
+      </nav>
+
     </header>
+<!-- end header  -->
+
     <%= yield %>
   </body>
 </html>

@@ -1,10 +1,14 @@
 <h1>Welcome to BestRead</h1>
 <h2>Your online Book Club</h2>
 
-<br><br>
-<hr>
+<p></p>
 
-<ul>
-<li><a href="books">Booklist</a></li>
-<li><a href="authors">Authorlist</a></li>
-</ul>
+
+<div class="book">
+  <%= link_to (image_tag @last_book.cover_img, size: "360x536"), book_path(@last_book.id) %>
+  <p><%= link_to "See a list of all books", books_path %></p>
+</div>
+<div class="author">
+  <%= link_to (image_tag @last_author.author_img, size: "360x536"), author_path(@last_author.id) %>
+  <p><%= link_to "See a list of all books", authors_path %></p>
+</div>
