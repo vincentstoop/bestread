@@ -13,9 +13,9 @@ class Author < ApplicationRecord
     end
   end
 
-  # validates :full, uniqueness: true
+
   validates :first_name, presence: true
-  validates :last_name, presence: true, uniqueness: true
+  validates :last_name, presence: true
   validates :author_img, length: { maximum: 250 }, allow_blank: true
   validates :bio, length: { maximum: 10000 }
   validates :quotes, length: { maximum: 1000 }, allow_blank: true
