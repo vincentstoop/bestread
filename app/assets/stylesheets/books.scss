@@ -6,40 +6,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "colors";
 
-article { /* .books */
+ul { /* .books */
+
+  /* =================================
+  Primary text color
+  ==================================== */
   color: $primary-text-color;
+
+  /* =================================
+  Background style
+  ==================================== */
+
+
   background-image: url("background.jpg");
   font-family: "Helvetica Neue", Helvetica, Arial;
+  line-height: 1.6;
+  font-size: 14px;
 
-// Style links
-a:link,
-a:visited {
-  color: $primary-link-color;
-}
-
-a:hover,
-a:active {
-  text-decoration: none;
-  color: $secondary-link-color;
-  background: $secondary-background-color;
-}
+  /* =================================
+  Box sizing
+==================================== */
+display: inline-flex;
+flex-direction: row;
 
 
-  header {
-    background-color: $secondary-background-color;
-    padding: 0px 25px;
-  }
 
-  h1 a {
-    height: 0px;
-    padding-top: 60px;
-    display: block;
-    font-family: "Esteban", sans-serif;
-    color: #fff;
-    text-decoration: none;
-    overflow: hidden;
-    background: image-url("http://www.waes.info/logo.png") no-repeat 0 0;
-  }
+* box-sizing: border-box;
 
 
 }
