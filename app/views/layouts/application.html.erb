@@ -9,14 +9,14 @@
   </head>
 
   <body>
+    <header>
+      <a href="/" title="home"><img src="/app/assets/images/logo.png"></a>
+      <%= link_to "MyBestRead", mybestread_path %>
+    </header>
     <%= yield %>
 
-    <br><br>
-    <hr>
-
-  <%= link_to "[All Authors]", authors_path %>
-  <%= link_to "[All Books]", books_path %>
-  <%= link_to "[Home]", "/" %>
+  <%= link_to "[All Authors]", authors_path, class: "button" %>
+  <%= link_to "[All Books]", books_path, class: "button" %>
 
   </body>
 </html>
