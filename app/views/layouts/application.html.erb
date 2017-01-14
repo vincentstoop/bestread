@@ -4,19 +4,15 @@
     <title>Bestread</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header>
-      <a href="/" title="home"><img src="/app/assets/images/logo.png"></a>
+      <%= link_to (image_tag "#{root_path}app/assets/images/arrow.png"), root_path %>
       <%= link_to "MyBestRead", mybestread_path %>
     </header>
     <%= yield %>
-
-  <%= link_to "[All Authors]", authors_path, class: "button" %>
-  <%= link_to "[All Books]", books_path, class: "button" %>
-
   </body>
 </html>
