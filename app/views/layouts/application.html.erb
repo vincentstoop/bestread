@@ -9,21 +9,23 @@
   </head>
 
   <body>
-<!-- begin header -->
-    <header>
-      <%= link_to (image_tag "#{root_path}app/assets/images/arrow.png"), root_path %>
+      <header>
+        <div class="container"><!-- begin header -->
+        <%= link_to (image_tag "http://www.waes.info/logo.png"), root_path %>
 
-<!--Nav bar  -->
-      <nav>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "MyBestRead", mybestread_path %></li>
-        <li><%= link_to "All Authors", "/authors" %></li>
-        <li><%= link_to "All Books", "/books" %></li>
-      </nav>
+  <!--Nav bar  -->
+        <nav>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "MyBestRead", mybestread_path %></li>
+          <li><%= link_to "All Authors", "/authors" %></li>
+          <li><%= link_to "All Books", "/books" %></li>
+          <li><%= link_to "Logout", root_path %></li>
+        </nav>
+      </div>
 
-    </header>
-<!-- end header  -->
+      </header>
+  <!-- end header  -->
 
-    <%= yield %>
-  </body>
-</html>
+<div class="container"><%= yield %>
+  </div>    </body>
+  </html>

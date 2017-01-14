@@ -1,88 +1,90 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import "colors";
-
-body {
-/* Background styles */
-  background-image: url("background.jpg");
-  width: 960;
-
-/* Box sizing */
-  * box-sizing: border-box;
-
-/* primary text color */
-  color: $primary-text-color;
-  font-family: "Helvetica Neue", Helvetica, Arial;
-  
-  /* =================================
-  Background style
-  ==================================== */
-  background-image: url("background.jpg");
-  font-family: "Helvetica Neue", Helvetica, Arial;
-  line-height: 1.6;
-  font-size: 14px;
-
-/* Links styles */
-  a {
-      text-decoration: none;
-  }
-
-  a:link,
-  a:visited {
-    color: $primary-link-color;
-  }
-
-  a:hover,
-  a:active {
-    text-decoration: none;
-    color: $secondary-link-color;
-    background: $secondary-background-color;
-  }
-
-}
-
-/* ================================
-Header
-==================================== */
-header {
-  background-color: $secondary-background-color;
-  padding: 0px 25px;
-  height: 80px;
-}
-
-
-
-nav {
-
-
-}
-
-/* ================================
-Article body
-==================================== */
-article { /* .books */
-
-/* Flex box */
-ul {
-  display: -webkit-flex;
-  display: inline-flex;
-  flex-direction: row;
-}
-
-/* =================================
-Flex items
-==================================== */
-li {
-    margin: 10px;
-}
-
-h1 {
-
-}
-
-
-}
+// // Place all the styles related to the books controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the books controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+// @import "colors";
+//
+// body {
+// /* Background styles */
+//   background-image: url("background.jpg");
+//
+// /* Box sizing */
+//   * box-sizing: border-box;
+//
+// /* primary text color */
+//   color: $primary-text-color;
+//   font-family: "Helvetica Neue", Helvetica, Arial;
+//
+//   /* =================================
+//   Background style
+//   ==================================== */
+//   background-image: url("background.jpg");
+//   font-family: "Helvetica Neue", Helvetica, Arial;
+//   line-height: 1.6;
+//   font-size: 14px;
+//
+// /* Links styles */
+//   a {
+//       text-decoration: none;
+//   }
+//
+//   a:link,
+//   a:visited {
+//     color: $primary-link-color;
+//   }
+//
+//   a:hover,
+//   a:active {
+//     text-decoration: none;
+//     color: $secondary-link-color;
+//     background: $secondary-background-color;
+//   }
+//
+// }
+//
+// /* ================================
+// Header
+// ==================================== */
+// header {
+//   background-color: $secondary-background-color;
+//   padding: 0px 25px;
+//   height: 80px;
+// }
+//
+//
+//
+// nav {
+//
+//
+// }
+//
+// /* ================================
+// Article body
+// ==================================== */
+// article { /* .books */
+//   display: flex;
+//   width: 960px;
+//
+// /* Flex box */
+// ul {
+//   display: flex;
+//   display: -webkit-flex;
+//   display: inline-flex;
+//   flex-direction: row;
+// }
+//
+// /* =================================
+// Flex items
+// ==================================== */
+// li {
+//     margin: 10px;
+// }
+//
+// h1 {
+//
+// }
+//
+//
+// }

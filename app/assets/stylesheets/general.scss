@@ -1,0 +1,74 @@
+@import "colors";
+body {
+  background-image: url("background.jpg");
+
+  color: $primary-text-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height:  1.6;
+  font-size: 14px;
+
+  & > header {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+      display: flex;
+      display: -webkit-flex;
+
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      a {
+        &:link,
+        &:visited {
+          display: block;
+          padding: 5px;
+          color: #fff;
+        }
+        &:hover,
+        &:active {
+          color: #e3e3e3;
+        }
+
+      }
+    }
+  }
+  a {
+    &.button {
+      background-color: $secondary-background-color;
+      padding: 10px 25px;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+
+  footer {
+    margin-top: 50px;
+    padding: 10px 25px;
+  }
+}
+
+.author {
+  img {
+    width: 400px;
+    height: 277px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
