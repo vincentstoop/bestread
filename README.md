@@ -1,24 +1,34 @@
-# README
+# BestRead
+## Online Book Club
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hackathon project during first week of Codaisseur Acadamy. This project was meant to teach us how a one-to-many relationship works in RoR.
 
-Things you may want to cover:
+### Database structure
+1. Author
+  * first_name:string
+  * prefix:string
+  * last_name:string
+  * author_img:string
+  * bio:text
+  * quotes:text
 
-* Ruby version
+2. Book
+  * title:string
+  * year:integer
+  * cover_img:string
+  * desc:text
+  * pages:integer
+  * isbn:string
+  * author:references
 
-* System dependencies
+### Running Locally
 
-* Configuration
+Make sure you have [Ruby](https://www.ruby-lang.org/en/) and [Bundler](http://bundler.io/) installed. This project uses [Rails 5.0.1](https://rubygems.org/gems/rails/versions/5.0.1)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+git clone git@github.com:vincentstoop/bestread.git
+cd bestread
+bundle install
+rails db:create db:migrate db:seed
+rails server
+```
